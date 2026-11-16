@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LDRS｜Dot's Toolbox</title>
+  <meta name="description" content="一行標籤就能放上可愛的 Loading 動畫，純 HTML 也能用。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Sans+TC:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+<script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/ring.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../"><span class="logo-dot"></span>Dot's Toolbox</a>
+      <span class="header-note">介面元件 / LDRS</span>
+    </div>
+  </header>
+
+  <main class="wrap detail">
+    <a class="back" href="../">← 回工具箱</a>
+
+    <section class="detail-head">
+      <div class="detail-meta">
+        <span class="tag tag--ui">介面元件</span>
+        <span class="status">👀 想試試</span>
+        <span class="added">收藏於 2026-11-16</span>
+      </div>
+      <h1>LDRS</h1>
+      <p class="lead">一行標籤就能放上可愛的 Loading 動畫，純 HTML 也能用。</p>
+    </section>
+
+    <section class="block">
+      <h2><span class="num">1</span>一句話認識它</h2>
+      <p>LDRS 是 uiball 出的 Loading 動畫集合，做成 Web Components，所以不管是純 HTML 還是 React 都能用，一行自訂標籤就有一個精緻的讀取動畫。</p>
+    </section>
+
+    <section class="block">
+      <h2><span class="num">2</span>什麼時候用得到</h2>
+      <ul>
+        <li>表單送出後等待回應時的 Loading</li>
+        <li>抽獎網頁按下按鈕到結果出現之間的轉場</li>
+        <li>圖片、資料還沒載入完成時的佔位</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2><span class="num">3</span>怎麼開始</h2>
+      <p>在 HTML 裡用 module 引入想要的 loader，再放對應標籤：</p><pre><code>&lt;script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/ring.js"&gt;&lt;/script&gt;
+
+&lt;l-ring size="40" color="coral"&gt;&lt;/l-ring&gt;</code></pre><p>現場示範：</p><div class="demo"><l-ring size="40" stroke="4" color="#FF5B2E"></l-ring></div><p>其他款式和可調參數到官網上直接調、直接複製。</p>
+    </section>
+
+    <section class="block">
+      <h2><span class="num">4</span>豆特筆記</h2>
+      <div class="note"><p>還沒實際用過，先收藏。</p></div>
+    </section>
+
+    <section class="block">
+      <h2><span class="num">5</span>相關連結</h2>
+      <ul>
+        <li><a href="https://uiball.com/ldrs/" target="_blank" rel="noopener">官網</a></li>
+        <li><a href="https://github.com/GriffinJohnston/ldrs" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 陳玟諺 Dot · NIU CSIE</span>
+      <span>Built with AGENTS.md rules</span>
+    </div>
+  </footer>
+</body>
+</html>

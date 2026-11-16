@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  詳細頁模板 — 新增資源時「複製」到 resources/<slug>.html
+  規則見 AGENTS.md 第 7 節。替換完後檔案裡不可以留下任何 {{ }}。
+
+  佔位符：
+  {{NAME}}            官方名稱（同 JSON name）
+  {{SUMMARY}}         一句話介紹（同 JSON summary）
+  {{CATEGORY}}        分類值，例如 animation（用在 class）
+  {{CATEGORY_LABEL}}  分類顯示名稱，例如 動畫
+  {{STATUS_LABEL}}    👀 想試試 / ✋ 用過 / 💛 愛用
+  {{ADDED}}           YYYY-MM-DD
+  {{INTRO}}           區塊 1：2～3 句介紹
+  {{USE_CASES}}       區塊 2：3～5 個 <li>
+  {{GET_STARTED}}     區塊 3：安裝＋最小範例（<p> 與 <pre><code>）
+  {{NOTES}}           區塊 4：豆特筆記，沒用過寫「還沒實際用過，先收藏。」
+  {{LINKS}}           區塊 5：<li><a href="...">...</a></li>
+  ============================================================
+-->
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{NAME}}｜Dot's Toolbox</title>
+  <meta name="description" content="{{SUMMARY}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Sans+TC:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../"><span class="logo-dot"></span>Dot's Toolbox</a>
+      <span class="header-note">{{CATEGORY_LABEL}} / {{NAME}}</span>
+    </div>
+  </header>
+
+  <main class="wrap detail">
+    <a class="back" href="../">← 回工具箱</a>
+
+    <section class="detail-head">
+      <div class="detail-meta">
+        <span class="tag tag--{{CATEGORY}}">{{CATEGORY_LABEL}}</span>
+        <span class="status">{{STATUS_LABEL}}</span>
+        <span class="added">收藏於 {{ADDED}}</span>
+      </div>
+      <h1>{{NAME}}</h1>
+      <p class="lead">{{SUMMARY}}</p>
+    </section>
+
+    <section class="block">
+      <h2><span class="num">1</span>一句話認識它</h2>
+      {{INTRO}}
+    </section>
+
+    <section class="block">
+      <h2><span class="num">2</span>什麼時候用得到</h2>
+      <ul>
+        {{USE_CASES}}
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2><span class="num">3</span>怎麼開始</h2>
+      {{GET_STARTED}}
+    </section>
+
+    <section class="block">
+      <h2><span class="num">4</span>豆特筆記</h2>
+      <div class="note">{{NOTES}}</div>
+    </section>
+
+    <section class="block">
+      <h2><span class="num">5</span>相關連結</h2>
+      <ul>
+        {{LINKS}}
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 陳玟諺 Dot · NIU CSIE</span>
+      <span>Built with AGENTS.md rules</span>
+    </div>
+  </footer>
+</body>
+</html>
